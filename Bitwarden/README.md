@@ -1,5 +1,10 @@
 # Bitwarden docker/docker-compose
 
+### Install docker/docker-compose.
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
 ### Create a bitwarden user.
 ```
 sudo adduser bitwarden
@@ -40,4 +45,5 @@ adminSettings__admins=admin@example.com
 
 Sources: \
 https://bitwarden.com/help/install-on-premise-linux \
-https://bitwarden.com/help/certificates
+https://bitwarden.com/help/certificates \
+https://docs.docker.com/engine/install/ubuntu
