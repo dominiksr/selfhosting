@@ -1,5 +1,11 @@
 # Nextcloud snap
 
+### Change ports if you use something else on this server
+```
+sudo snap set nextcloud ports.http=80
+sudo snap set nextcloud ports.https=443
+```
+
 ### Add nextcloud IP, DNS name, IP nextcloud have over VPN in `/var/snap/nextcloud/current/nextcloud/config/config.php`
 ```
 (...)
