@@ -1,4 +1,4 @@
-# Pi-hole
+# Pi-hole docker/docker-compose
 
 ### Install docker/docker-compose.
 ```
