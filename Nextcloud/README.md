@@ -1,14 +1,19 @@
 # Nextcloud snap
 
-### Change ports if you use something else on this server
+### Install.
 ```
-sudo snap set nextcloud ports.http=80
-sudo snap set nextcloud ports.https=443
+sudo snap install nextcloud
 ```
+### Enter a username and strong password to create the first administrator account, and click Install.
 
+### Edit the main NextCloud configuration file.
 ### Add nextcloud IP, DNS name, IP nextcloud have over VPN in `/var/snap/nextcloud/current/nextcloud/config/config.php`
 ```
+sudo vim /var/snap/nextcloud/current/nextcloud/config/config.php
+```
+```
 (...)
+'trusted_domains' =>
 array (
     0 => 'localhost',
     1 => 'nextcloud.lan',
@@ -17,7 +22,22 @@ array (
 (...)
 ```
 
+### Enable self signed certificate
+```
+sudo /snap/bin/nextcloud.enable-https self-signed
+```
+
+### Change ports if you use something else on this server.
+
+```
+sudo snap set nextcloud ports.http=80
+sudo snap set nextcloud ports.https=443
+```
+
+
+
 Sources: \
 https://github.com/nextcloud-snap/nextcloud-snap \
 https://github.com/nextcloud-snap/nextcloud-snap/wiki/Port-configuration \
-https://github.com/nextcloud-snap/nextcloud-snap/wiki/Managing-encryption
+https://github.com/nextcloud-snap/nextcloud-snap/wiki/Managing-encryption \
+https://www.vultr.com/docs/how-to-install-nextcloud-on-ubuntu-22-04-with-snap
