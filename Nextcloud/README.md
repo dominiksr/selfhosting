@@ -11,7 +11,7 @@ sudo snap install nextcloud
 ```
 sudo vim /var/snap/nextcloud/current/nextcloud/config/config.php
 ```
-```
+<pre>
 (...)
 'trusted_domains' =>
 array (
@@ -20,7 +20,7 @@ array (
     2 => '192.168.xxx.xxx',
     3 => 'xxx.xxx.xxx.xxx',   
 (...)
-```
+</pre>
 
 ### Enable self signed certificate.
 ```
