@@ -11,7 +11,7 @@ sudo sh get-docker.sh
 ```
 id username
 ```
-```
+<pre>
 # docker-compose.yml
 (...)
     environment:
@@ -19,7 +19,7 @@ id username
       - PGID=1000
       - TZ=Etc/UTC
 (...)
-```
+</pre>
 ### Create config and worspace folder.
 ```
 mkdir config
