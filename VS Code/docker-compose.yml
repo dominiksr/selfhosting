@@ -3,18 +3,19 @@ services:
   code-server:
     image: lscr.io/linuxserver/code-server:latest
     container_name: code-server
+    env_file:
+      - ./.env
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
-      - PASSWORD=password
-#      - HASHED_PASSWORD= #optional
-      - SUDO_PASSWORD=password
-#      - SUDO_PASSWORD_HASH= #optional
+      - PASSWORD=${HIDDEN_PASSWORD}
+      - SUDO_PASSWORD=${HIDDEN_PASSWORD}
 #      - PROXY_DOMAIN=code-server.myDomain #optional
-      - DEFAULT_WORKSPACE=/config/workspace #optional
+      - DEFAULT_WORKSPACE=/repos #optional
     volumes:
-      - ./config:/config # path to appdata config
+      - ./config:/config
+      - ./repos:/repos
     ports:
       - 8443:8443
     restart: unless-stopped
