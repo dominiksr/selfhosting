@@ -25,19 +25,19 @@ curl -Lso bitwarden.sh "https://func.bitwarden.com/api/dl/?app=self-host&platfor
 ./bitwarden.sh install
 ```
 ### Change "localhost" in config file.
-```
+<pre>
 # bwdata/config.yml
 (...)
 url: https://192.168.xxx.xxx
 (...)
-```
+</pre>
 ### Change adminSettings__admins to access to the admin portal.
-```
+<pre>
 # bwdata/env/global.override.env
 (...)
 adminSettings__admins=admin@example.com
 (...)
-```
+</pre>
 ```
 ./bitwarden.sh rebuild
 ./bitwarden.sh restart
