@@ -25,10 +25,10 @@ id username
 mkdir config
 mkdir repos
 ```
-
 ### Start docker compose.
-```docker compose up -d```
-
+```
+docker compose up -d
+```
 
 Soures: \
 https://github.com/coder/code-server \
