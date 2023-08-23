@@ -8,7 +8,9 @@ sudo sh get-docker.sh
 ### Write sudo and user password in .env file.
 
 ### Check ID/Group number and fill PUID/GUID
-```id username```
+```
+id username
+```
 ```
 # docker-compose.yml
 (...)
