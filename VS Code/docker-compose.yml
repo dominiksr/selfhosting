@@ -6,7 +6,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
+      - TZ=Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
       - PASSWORD=password
 #      - HASHED_PASSWORD= #optional
       - SUDO_PASSWORD=password
